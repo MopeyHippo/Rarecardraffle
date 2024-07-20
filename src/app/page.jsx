@@ -2,6 +2,8 @@
 import Image from "next/image";
 
 import Logo from "@/app/assets/images/RareCardRaffles_Logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 
 export default function Home() {
   return (
@@ -10,7 +12,11 @@ export default function Home() {
 
       <Image className="-rotate-[17deg]" src={Logo} width={192} height={192} alt="logo"></Image>
 
-      <nav class="flex flex-col md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-4 ">
+      <div className="visible md:collapse flex place-items-center">
+        <GiHamburgerMenu />
+      </div>  
+
+      <nav class="collapse md:visible flex flex-col md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-4 ">
         <button class="bg-red-500 border-4 border-red-800 text-white py-2 px-4 rounded">Current Raffles</button>
         <button class="bg-red-500 border-4 border-red-800 text-white py-2 px-4 rounded">Previous Raffles</button>
         <button class="bg-red-500 border-4 border-red-800 text-white py-2 px-4 rounded">About / Contact Us</button>
